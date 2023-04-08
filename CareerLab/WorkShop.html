@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+         <!-- JavaScript -->
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  background-color:transparent;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: transparent;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background-image:linear-gradient(120deg, #ffd89b,#19547b,#e74c3c);
+  width: 0%;
+  border-radius:5px;
+}
+#title_container{
+  background-color: white;
+  
+}
+#header_title{
+  background-color:black;
+  color:white;
+  padding:5px;
+  
+}
+#header_subtitle{
+  padding:5px;
+}
+.triangle_top_left {
+      width: 0;
+      height: 0;
+      border-top: 50px solid ;
+      background-image:linear-gradient(120deg, #2C3E50,#000000);
+      border-right: 50px solid transparent;
+      
+    }
+.triangle_bottom_right{
+      width: 0;
+      height: 0;
+      border-bottom: 50px solid ;
+      background-image:linear-gradient(120deg, #2C3E50,#000000);
+      border-left: 50px solid transparent;
+     
+}
+.v1.v2{
+  border-left: 6px thick solid black;
+  border-radius: 5px;
+  height: 50px;
+
+}
+.navbar-toggler {
+  background:black;
+  color:white;
+}
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+}
+
+.nav-link{
+  color: black;
+}
+.nav-link:hover{
+    background-color:#999999;
+    transition: 1.5s;
+    color: black;
+}
+#intro_container{
+    
+   
+
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+#intro_container{
+    background-image:linear-gradient(120deg, #ffd89b,#19547b);
+    color:black;
+    
+}
+.intro{
+  padding-top:0;
+  padding-left:50px;
+  padding-right:50px;
+}
+.tools{
+  padding-left:50px;
+  padding-right:50px;
+}
+.carousel{
+  margin-top: 50px;
+}
+.carousel-inner{
+  height: 100px;
+}
+.carousel-caption{
+  color: #fff;
+  top: 50%;
+}
+#testimonial_container{
+    background-color:#242424;
+   
+    color:white;
+    padding:5px;
+    
+}
+#content_container{
+
+  background-image: url("white-elegant-texture-wallpaper-modern-design.jpg");
+  background-repeat: no-repeat;
+    background-size:100%;
+    color:darkgrey;
+    height:100%;
+   
+background-size:cover;
+
+}
+#accordion_header{
+  background-image:linear-gradient(120deg, #141e30,#243b55);
+  box-shadow: 5px 5px 10px rgba(0,0,0,.9);
+    padding:5px;
+    margin-left:25%;
+    margin-right:25%;
+    color:white;
+}
+#accordion{
+    margin-left:15%;
+    margin-right:15%;
+}
+
+.card{
+    background-image:linear-gradient(120deg, #141e30,#243b55);
+    box-shadow: 5px 5px 10px rgba(0,0,0,.9);   
+    opacity:0;
+    margin:10px;
+}
+.card:hover , .card:active{
+  background-image:linear-gradient(120deg, #243b55,#e74c3c);
+}
+.card-body , .collapsed{
+  color:white;
+  
+}
+#container2{
+    background-color:#242424;
+    
+    color:white;
+    
+    margin-top:-10px;
+    margin-bottom:20px;
+    
+}
+.access_container{
+  padding-top:20px;
+  padding-left:20px;
+
+}
+.photo_container{
+  margin-top:140px;
+ 
+ 
+}
+#card_img{
+  max-width: 150px;
+  max-height: 150px;
+ 
+}
+.card-bio{
+ padding:50px;
+}
+.card-bio-body{
+     box-shadow: 5px 5px 15px #e74c3c;
+     transition: all 0.3s ease-in;
+     background-color:whitesmoke;
+     padding-top:100px;
+     margin-top:-100px;
+}
+.card-bio-body:hover{
+     background:#e74c3c;
+     border-radius:5px;
+     border:none;
+   }
+   #info_container{
+       background-color: #131313;
+       color:white;
+    
+       margin-top:20px;
+   }
+#info_container_intro{
+    color:black;
+    border-radius:20px;
+    padding-bottom:10px;
+    margin-bottom:20px;      
+}
+
+
+.contact-box{
+  margin-top:50px;
+}
+#contact-box_id{
+  background-color:white;
+  color:black;
+  border-radius:20px;
+  margin:20px;
+  padding:5px;
+}
+#contact-box_id:hover{
+  background-color:#ffd89b;
+  transition:1s;
+}
+
+.thought {
+  display:flex;
+  background-color:#2c3e50;
+  padding:20px;
+  border-radius:30px;
+  min-width:40px;
+  min-height:40px;
+  margin:20px;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  text-align:center; 
+  z-index:3;
+}
+.thought:before,
+.thought:after {
+  content:"";
+  background-color:#ffd89b;
+  border-radius:50%;
+  display:block;
+  position:absolute;
+  z-index:-1;
+}
+.thought:before {
+  width:44px;
+  height:44px;
+  top:-12px;
+  left:28px;
+  box-shadow:-50px 30px 0 -12px #e74c3c;
+}
+.thought:after {
+  bottom:-10px;
+  right:26px;
+  width:30px;
+  height:30px;
+  box-shadow:40px -34px 0 0 #e74c3c,
+             -28px -6px 0 -2px #e74c3c,
+             -24px 17px 0 -6px #e74c3c,
+             -5px 25px 0 -10px #e74c3c;
+  
+}
+#footer_container{
+  background-color:black;
+  padding:20px;
+  color:white;
+}
+#card_faq{
+  background-color:#242424;
+  margin:10px;
+}
+.card-body2{
+  background-color:#242424;
+}
+
+.social{
+  background-color:black;
+  color:white;
+}
+.social_media{
+  padding:50px;
+  margin:0 15px;
+}
+.fa{
+  margin:20px;
+  padding:20px;
+}
+.fa-facebook{
+  background-color:#3B5998;
+  color:white;
+  border-radius:50%;
+  
+}
+
+.fa-instagram{
+  background-image:linear-gradient(120deg, #2c3e50,#fd746c);
+  color:white;
+  border-radius:50%;
+}
+.fa-google{
+  background-color:#dd4b39;
+  color:white;
+  border-radius:50%;
+}
+
+blockquote {
+    border:none;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    margin-top:-30px;
+    margin-bottom:-10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote h3:before { 
+content: open-quote;
+font-weight: bold;
+font-size:50px;
+color:#e74c3c;
+} 
+blockquote h3:after { 
+content: close-quote;
+font-weight: bold;
+font-size:50px;
+color:#e74c3c;
+  
+}
+
+
+</style>
+    </head>
+    <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>
+    <body>
+
+        <div class="grid-container text-center" id="title_container">
+            <div class="grid-container" id="header_title">
+                <h2>Career Lab</h2>
+            </div>
+            <div class="grid-container" id="header_subtitle">
+                <h5>6 days to transform your career!</h5>
+            </div>
+        </div>
+
+
+
+        <nav class="navbar navbar-expand-lg  justify-content-center ">
+
+
+
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center justify-content-center" id="navbarSupportedContent">
+                <div class="triangle_top_left d-none d-lg-block"></div>
+                <ul class="navbar-nav ">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content_container">The Program</a>
+                    </li>
+                    <div class="v1"></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team_container">Our Team</a>
+                    </li>
+                    <div class="v2"></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info_container">Contact Us</a>
+                    </li>
+
+                </ul>
+                <div class="triangle_bottom_right d-none d-lg-block"></div>
+            </div>
+
+
+
+        </nav>
+
+        <div class="curved-div" id="intro_container">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,256L40,224C80,192,160,128,240,117.3C320,107,400,149,480,176C560,203,640,213,720,181.3C800,149,880,75,960,90.7C1040,107,1120,213,1200,245.3C1280,277,1360,235,1400,213.3L1440,192L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+            <div class="intro text-left">
+                <p>
+                    Are you feeling lost or stuck in your career? Do you want to take your professional life to the next level but don't know where to start? Our career coaching company can help!
+                </p>
+
+                <p>
+                    At our company, we provide personalized coaching services to help you identify your strengths, interests, and career goals. We work with you to create a customized plan that suits your unique needs and circumstances. Our experienced coaches provide guidance and support every step of the way, from resume writing and job search strategies to interview coaching and career development planning.
+                </p>
+
+                <p>
+                    We understand that everyone's career journey is different, which is why we tailor our services to your individual needs. Whether you're a recent graduate or a seasoned professional, we can help you achieve your career aspirations. Our team of experts has years of experience in a variety of industries and can offer valuable insights and advice to help you succeed.
+                </p>
+
+                <p>
+                    Don't let uncertainty hold you back from pursuing your dream career. Contact us today to schedule a consultation and take the first step towards a fulfilling and rewarding professional life.
+                </p>
+            </div>
+            <div class="tools">
+                <h5>In the career lab you will acquire:</h5>
+                <p> •	You will learn the best strategies to build your dream career.</p>
+                <p> •	You will learn how to use the best tools in the market.</p>
+                <p> •	We will create the apropriate plan, based on your needs, in order to achieve your goals.</p>
+                <p> •	We will guide you through the entire process and train you for your interviews.</p>
+
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#ffffff" fill-opacity="1" d="M0,192L40,181.3C80,171,160,149,240,165.3C320,181,400,235,480,234.7C560,235,640,181,720,160C800,139,880,149,960,176C1040,203,1120,245,1200,245.3C1280,245,1360,203,1400,181.3L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+        </div>
+
+
+        <div class="grid-container text-center" id="testimonial_container">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                            <blockquote><h3>Emily P.</h3></blockquote>
+                            <p>I was blown away by the quality of service I received from CareerLab. They were incredibly knowledgeable about their products and helped me find the perfect career. Thank you, CareerLab!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <blockquote><h3>David L.</h3></blockquote>
+                            <p>I cannot recommend CareerLab enough for their amazing services. They captured the essence of my dream career perfectly. Thank you, CareerLab!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <blockquote><h3>Tyler G.</h3></blockquote>
+                            <p>I was struggling with my career path and decided to seek counseling. I am so grateful that I found CareerLab. They were professional, knowledgeable and insightful. Thanks to them, I have made to create the career of my dreams.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid-container text-center" id="content_container" style="padding:1%;">
+            <div class="grid-container text-center" id="accordion_header">
+                <h5>Our Program</h5>
+            </div>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
+                            Day 1
+                            <i class="icon ion-md-add"></i>
+                            <i class="icon ion-md-remove"></i>
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            We will identify your passion and purpose, set a specific career goal and build a career map.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            Day 2
+                            <i class="icon ion-md-add"></i>
+                            <i class="icon ion-md-remove"></i>
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            We will build your work profile by creating your resume, portfolio and career.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                            Day 3
+                            <i class="icon ion-md-add"></i>
+                            <i class="icon ion-md-remove"></i>
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            You will learn how to use viable tools such as LinkedIn and many more websites which will help you build professional connections.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                            Day 4
+                            <i class="icon ion-md-add"></i>
+                            <i class="icon ion-md-remove"></i>
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            We will train you for your interviews and guide you through.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                            Day 5
+                            <i class="icon ion-md-add"></i>
+                            <i class="icon ion-md-remove"></i>
+                        </a>
+                    </div>
+                    <div id="collapseFive" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            We will review the results and adjust anything necessary.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-container" id="container2">
+            <div class="row">
+                <div class="access_container grid-container text-center col-sm-0 col-md-0 col-lg-7 col-xl-6 mx-auto">
+                    <h5>You will get access to:</h5>
+                    <div class="row">
+                        <div class="thought col-sm-3">
+                            <p>Our best career coaches, ready to guide you during your subscription</p>
+                        </div>
+                        <div class="thought col-sm-3">
+                            <p>Personal meetings with different recruiters in the field of your career choice</p>
+                        </div>
+                        <div class="thought col-sm-3">
+                            <p>A cheat sheet with guidelines on how to build your resume</p>
+                        </div>
+                        <div class="thought col-sm-5">
+                            <p>Access to a premium LinkedIn account</p>
+                        </div>
+                        <div class="thought col-sm-5">
+                            <p>Follow-Up meetings to review your progress and adjust anything you need to.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid-container" id="team_container">
+
+            <div class="row">
+                <div class="card-bio col-sm-4 text-center">
+                    <img class="img-fluid rounded-circle w-50 mb-3" src="profile_pic.png" alt="Card image" id="card_img">
+
+                    <div class="card-bio-body">
+                        <div class="item-box-body">
+                            <h4 class="card-title">John Smith</h4>
+                            <div class="item-box-heading">
+                                <p class="card-text">
+                                    With over 20 years of experience in business management and is passionate about building high-performing teams.
+                                </p>
+                            </div>
+                            <div class="item-box-more" id="item-box-more-id">
+                                <p>
+                                    He holds an MBA from Harvard Business School and is passionate about creating innovative solutions to complex problems. John has a proven track record of building high-performing teams and driving business growth.
+
+                                </p>
+                            </div>
+                            <div class="mt">  <a tabindex="0" class="btn" id="btn_id">More...</a></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-bio col-sm-4 text-center">
+                    <img class="img-fluid rounded-circle w-50 mb-3" src="profile_pic.png" alt="Card image" id="card_img">
+                    <div class="card-bio-body">
+                        <div class="item-box-body">
+                            <h4 class="card-title">Sarah Lee</h4>
+                            <div class="item-box-heading">
+                                <p class="card-text">Our Marketing Manager, is a creative marketer with a knack for developing effective marketing strategies.  </p>
+                            </div>
+                            <div class="item-box-more" id="item-box-more-id_2">
+                                <p>
+                                    She has worked with several startups and has helped them establish their brands and build a strong online presence. Sarah has a knack for developing effective marketing strategies and is committed to delivering results that align with our company's goals.
+                                </p>
+                            </div>
+                            <div class="mt">  <a tabindex="0" class="btn" id="btn_id_2">More...</a></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-bio col-sm-4 text-center">
+                    <img class="img-fluid rounded-circle w-50 mb-3" src="profile_pic.png" alt="Card image" id="card_img">
+                    <div class="card-bio-body">
+                        <div class="item-box-body">
+                            <h4 class="card-title">Alex Johnson</h4>
+                            <div class="item-box-heading">
+                                <p class="card-text">Our Operations Manager, is an experienced operations manager with a strong track record of managing complex supply chains.</p>
+                            </div>
+                            <div class="item-box-more" id="item-box-more-id_3">
+                                <p>
+                                    He has worked with several Fortune 500 companies and has implemented several process improvements that have resulted in significant cost savings. Alex has a strong track record of managing complex supply chains and is committed to streamlining operations to drive business growth.
+                                </p>
+                            </div>
+                            <div class="mt">  <a tabindex="0" class="btn" id="btn_id_3">More...</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-bio col-sm-6 text-center">
+                    <img class="img-fluid rounded-circle w-50 mb-3" src="profile_pic.png" alt="Card image" id="card_img">
+                    <div class="card-bio-body">
+                        <div class="item-box-body">
+                            <h4 class="card-title">James Kim</h4>
+                            <div class="item-box-heading">
+                                <p class="card-text">Οur Sales Manager, is a seasoned sales professional with over 15 years of experience in sales management.</p>
+                            </div>
+                            <div class="item-box-more" id="item-box-more-id_4">
+                                <p>
+                                    He has over 15 years of experience in sales management and has helped several companies increase their revenue by implementing effective sales strategies. James is passionate about building strong relationships with clients and is committed to delivering exceptional customer service.
+                                </p>
+                            </div>
+                            <div class="mt">  <a tabindex="0" class="btn" id="btn_id_4">More...</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-bio col-sm-6 text-center">
+                    <img class="img-fluid rounded-circle w-50 mb-3" src="profile_pic.png" alt="Card image" id="card_img">
+                    <div class="card-bio-body">
+                        <div class="item-box-body">
+                            <h4 class="card-title">Emily Chen</h4>
+                            <div class="item-box-heading">
+                                <p class="card-text">Οour Customer Support Specialist, is a customer-focused professional with a strong background in customer support. </p>
+                            </div>
+                            <div class="item-box-more" id="item-box-more-id_5">
+                                <p>
+                                    She has a strong background in customer support and has helped several customers resolve technical issues with ease. Emily has a passion for problem-solving and is committed to delivering exceptional customer service that exceeds expectations.
+                                </p>
+                            </div>
+                            <div class="mt">  <a tabindex="0" class="btn" id="btn_id_5">More...</a></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="grid-container text-center" id="info_container">
+            <h4>Contact Us</h4>
+
+
+            <div class="row ">
+
+                <div class="grid-container text-center col-sm col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center" id="info_container_intro">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.178882284794!2d-74.01790882341308!3d40.71407843748751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1b73ce62bf%3A0x98fe795ba386c443!2zMjMwIFZlc2V5IFN0LCBOZXcgWW9yaywgTlkgMTAwODAsIM6Xzr3Pic68zq3Ovc61z4IgzqDOv867zrnPhM61zq_Otc-C!5e0!3m2!1sel!2sgr!4v1680957050430!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+
+                <div class="grid-container justify-content-center col-sm col-md-6 col-lg-6 col-xl-6">
+                    <div class="row text-center">
+                        <div class="info text-center col-sm" id="contact-box_id">
+                            <h5>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar-event-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM0 5h16v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5zm12.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z" />
+                                </svg> Dates:
+                            </h5>
+                            <p>• 26,27/9 <p>
+                            <p>• 10,11/10</p>
+                            <p>• 24,25/10</p>
+                        </div>
+                        <div class=" info text-center col-sm" id="contact-box_id">
+                            <h5>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M15 4H1v8h14V4zM1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1z" />
+                                    <path d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+                                </svg> Price:
+                            </h5>
+                            <p>•	270€ </p>
+                            <p>•	330€ with installments</p>
+                            <p> (55€) per lab</p>
+                        </div>
+                    </div>
+
+                    <div class="row text-center">
+
+                        <div class="info  text-center col-sm" id="contact-box_id">
+                            <h5>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                                </svg> Address:
+                            </h5>
+                            <p>230 Vesey St New York, USA.</p>
+                        </div>
+
+                        <div class="info  text-center col-sm" id="contact-box_id">
+                            <h5>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
+                                </svg> Contact Information: <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+
+                                </svg>
+                            </h5>
+
+                            <p>• Phone number: 210999999</p>
+                            <p>• e-mail: example@gmail.com</p>
+                            <p>• Instagram: AnInstagramAccount </p>
+                            <p>• Facebook: aFacebookAccount</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="row">
+            <div class="grid-container text-center col-sm" id="footer_container">
+                <div class="grid-container text-center" id="accordion_header_faq">
+                    <h5>Common questions</h5>
+                </div>
+                <div id="accordion">
+
+                    <div class="card2">
+                        <div class="card-header" id="card_faq">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                                Who is this program for;
+
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-parent="#accordion">
+                            <div class="card-body2">
+                                Anyone who is passionate enough to build their dream career but doesnt know where to start.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="card-header" id="card_faq">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                                Who many hours is this program;
+                                <i class="icon ion-md-add"></i>
+                                <i class="icon ion-md-remove"></i>
+                            </a>
+                        </div>
+                        <div id="collapseFive" class="collapse" data-parent="#accordion">
+                            <div class="card-body2">
+                                The program is for 10 hours, 2 hours per day.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="card-header" id="card_faq">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
+                                Is there a discount?
+                                <i class="icon ion-md-add"></i>
+                                <i class="icon ion-md-remove"></i>
+                            </a>
+                        </div>
+                        <div id="collapseSix" class="collapse" data-parent="#accordion">
+                            <div class="card-body2">
+                                Yes, there is a discount for  newly graduates and people 26 years old and younger!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="social grid-container text-center col-sm">
+                <div class="social_media text-center">
+                    <a class="fa fa-facebook"></a>
+                    <a class="fa fa-instagram"></a>
+                </div>
+
+                <footer> <small>&copy; Copyright 2023 CareerLab</small> </footer>
+            </div>
+        </div>
+
+        <script>
+    // When the user scrolls the page, execute myFunction
+            window.onscroll = function () { myFunction() };
+
+            function myFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+
+
+        <script>
+            $(function () {  // $(document).ready shorthand
+                $('.monster').fadeIn('slow');
+            });
+
+            $(document).ready(function () {
+
+                /* Every time the window is scrolled ... */
+                $(window).scroll(function () {
+
+                    /* Check the location of each desired element */
+                    $('.card').each(function (i) {
+
+                        var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                        /* If the object is completely visible in the window, fade it it */
+                        if (bottom_of_window > bottom_of_object) {
+
+                            $(this).animate({ 'opacity': '1' }, 2500);
+
+                        }
+
+                    });
+
+
+
+
+
+                });
+
+            });
+
+        </script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                $(function () {
+                    $("#item-box-more-id").hide();
+                });
+
+                $(function () {
+                    $("#item-box-more-id_2").hide();
+                });
+
+                $(function () {
+                    $("#item-box-more-id_3").hide();
+                });
+
+                $(function () {
+                    $("#item-box-more-id_4").hide();
+                });
+
+                $(function () {
+                    $("#item-box-more-id_5").hide();
+                });
+
+
+
+
+                $("#btn_id").click(function () {
+                    $("#item-box-more-id").slideToggle();
+                });
+
+                $("#btn_id_2").click(function () {
+                    $("#item-box-more-id_2").slideToggle();
+                });
+
+                $("#btn_id_3").click(function () {
+                    $("#item-box-more-id_3").slideToggle();
+                });
+
+                $("#btn_id_4").click(function () {
+                    $("#item-box-more-id_4").slideToggle();
+                });
+
+                $("#btn_id_5").click(function () {
+                    $("#item-box-more-id_5").slideToggle();
+                });
+
+            });
+
+
+
+        </script>
+
+
+
+
+    </body>
+
+</html> 
