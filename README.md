@@ -9,5 +9,4 @@ Developed website using HTML5, CSS3, Bootstrap and JavaScript/jQuery.
 
 ![Screenshot_58](https://user-images.githubusercontent.com/129271569/230724469-41af2df2-56d8-48fb-913e-245020f07233.png)
 
-
-
+![Screenshot_59](https://user-images.githubusercontent.com/129271569/230724496-fab145a5-4640-4438-b10b-e02fde4adb8b.png)
