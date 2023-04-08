@@ -7,5 +7,7 @@ Developed website using HTML5, CSS3, Bootstrap and JavaScript/jQuery.
 
 ![Screenshot_57](https://user-images.githubusercontent.com/129271569/230724440-04518507-28db-4b2d-987c-8bebfe94216b.png)
 
+![Screenshot_58](https://user-images.githubusercontent.com/129271569/230724469-41af2df2-56d8-48fb-913e-245020f07233.png)
+
 
 
